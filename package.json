@@ -1,7 +1,7 @@
 {
-  "name": "micromachine",
+  "name": "apimachine",
   "version": "0.5.0",
-  "description": "Test microservices",
+  "description": "API test runner for microservices",
   "main": "server.js",
   "author": "Strategic Machines",
   "license": "MIT",
@@ -13,13 +13,12 @@
     "winston": "^2.3.1"
   },
   "devDependencies": {
+    "ava": "0.25.0",
     "standard": "^9.0.1",
     "tap": "^10.3.0"
   },
   "scripts": {
-    "start": "node ./server.js --start",
-    "pretest": "standard",
-    "test": "tap tests/**/*.js",
-    "postinstall": "cd ./skills/banter && npm install"
+    "start": "node ./server.js --start",  
+    "test": "ava"
   }
 }
