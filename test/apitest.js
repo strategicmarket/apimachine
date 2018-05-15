@@ -1,26 +1,17 @@
 import test 				from 'ava';
 import request 			from 'supertest';
-import express 			from 'express';
-import bodyParser 	from 'body-parser'
+import app 					from '../routes/app.js'
 
-const app = express();
 
-const signupHandler = () => {
-	resolve()
-}
+let  api = request('http://localhost:5500');
 
-const makeApp = () => {
-	const app = express();
-	app.use(bodyParser.json());
-	app.post('/signup', signupHandler);
-	return app;
-}
 
 test('signup:Success', async t => {
 	t.plan(2);
 
-	const res = await request(makeApp())
+	const res = await request(app)
 		.post('/signup')
+		.set('Accept', 'application/x-www-form-urlencoded')
 		.send({email: 'ava@rocks.com', password: '123123'});
 
 	t.is(res.status, 200);
