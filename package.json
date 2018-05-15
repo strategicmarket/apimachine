@@ -8,7 +8,8 @@
   "dependencies": {},
   "devDependencies": {
     "ava": "0.25.0",
-    "babel-register": "^6.26.0"
+    "babel-register": "^6.26.0",
+    "supertest": "^3.1.0"
   },
   "ava": {
     "files": [
@@ -20,11 +21,7 @@
     "failFast": true,
     "failWithoutAssertions": false,
     "tap": false,
-    "powerAssert": false,
-    "require": [
-      "babel-register"
-    ],
-    "babel": "inherit"
+    "powerAssert": false
   },
   "scripts": {
     "test": "ava --verbose"
