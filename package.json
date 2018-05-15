@@ -5,12 +5,11 @@
   "main": "server.js",
   "author": "Strategic Machines",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "ava": "0.25.0"
   },
-  "scripts": {  
-    "test": "ava"
+  "scripts": {
+    "test": "ava --verbose"
   }
 }
