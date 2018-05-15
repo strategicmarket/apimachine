@@ -1,7 +1,15 @@
+import test 				from 'ava';
+import request 			from 'supertest';
+import express 			from 'express';
+import bodyParser 	from 'body-parser'
 
+const app = express();
 
+const signupHandler = () => {
+	resolve()
+}
 
-function makeApp() {
+const makeApp = () => {
 	const app = express();
 	app.use(bodyParser.json());
 	app.post('/signup', signupHandler);
