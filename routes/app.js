@@ -5,22 +5,22 @@ const bodyParser = 	require('body-parser')
 
 const app = express();
 
-app.use(bodyParser.json());
-
+app.use(bodyParser.json({
+	type: 'application/json',
+  extended: true
+	}));
 
 const signupHandler = (req, res) => {
+	const {method, url, headers, body } = req
 	console.log("entered handler")
-	console.log(req.body)
-	//res.send({status: 200})
+	console.log("method " + method)
+	console.log("url " + url)
+	console.log("headers " + JSON.stringify(headers))
+	console.log("body " + JSON.stringify(body))
 	res.writeHead(200, {'Content-Type': 'application/json'})
-	res.write(JSON.stringify({ email: 'ava@rocks.com' }))
+	res.write(JSON.stringify({ email: 'admin@strategicmachines.io' }))
 	res.end()
-	//res.status = 200
-//	res.body = { email: 'ava@rocks.com' }
-	///resolve(res)
-//	return new Promise ((resolve, reject) => {
-//		resolve(res)
-//	})
+
 }
 
 app.get('/status', (req , res) => {

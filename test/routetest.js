@@ -15,8 +15,8 @@ test('signup:Success', async t => {
 
 	const res = await request(app)
 		.post('/signup')
-		.send({email: 'ava@rocks.com', password: '123123'});
+		.send({email: 'admin@strategicmachines.io', password: '123123'});
 
 	t.is(res.status, 200);
-	t.is(res.body.email, 'ava@rocks.com');
+	t.is(res.body.email, 'admin@strategicmachines.io');
 });
