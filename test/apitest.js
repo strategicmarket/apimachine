@@ -10,8 +10,7 @@ test('signup:Success', async t => {
 	t.plan(2);
 
 	const res = await request(app)
-		.post('/signup')
-		.set('Accept', 'application/x-www-form-urlencoded')
+		.post('/signup')		
 		.send({email: 'ava@rocks.com', password: '123123'});
 
 	t.is(res.status, 200);
