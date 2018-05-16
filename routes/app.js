@@ -15,6 +15,12 @@ const signupHandler = (req, res) => {
 	return res
 }
 
+app.get('/status', (req , res) => {
+  res.send({
+    status: 'Ok'
+  })
+})
+
 app.post('/signup', signupHandler);
 
 
