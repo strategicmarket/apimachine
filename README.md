@@ -18,8 +18,9 @@ The platform is configured to start a nodejs server and execute a sequence of te
 
 One of the tests in the sequence will fire an api request to the micromachine server. If the server is not running, the test will fail and terminate this nodejs process
 
-Postman can also be used to construct an api, ping port 3100, and reach the micromachine server.
-For examle
+Postman can also be used to construct multiple tests:
+1. simple http get transaction: localhost:3100/status  > renders a status object
+2. http post transaction: Localhost:3100/signup   > include an payload object (raw, application/json) with email and pswd 
 
 ## License and Use
  [LICENSE](./LICENSE.txt)
