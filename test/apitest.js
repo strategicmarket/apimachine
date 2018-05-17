@@ -1,9 +1,9 @@
 
 // test to pulse a route the micromachine server, running on port 5500
+// this demonstrates the use of supertest test runner -- with ava -- for this api call 
 
 import test 				from 'ava';
 import request 			from 'supertest';
-import app 					from '../routes/app.js'
 
 let  api = request('http://localhost:5500');
 
