@@ -33,7 +33,7 @@
     "member": {
     "firstname": "Jane",
     "lastname": "Noder",
-    "image": 'https://randomuser.me/api/portraits/lego/0.jpg',
+    "image": "https://randomuser.me/api/portraits/lego/0.jpg",
     "addr1": "200 Main Street",
     "addr2": "apt 100",
     "city": "Charlotte",

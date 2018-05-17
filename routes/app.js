@@ -73,7 +73,7 @@ const callOpenWhisk = (route) => {
 	return new Promise((resolve, reject) => {
 	   request.post( api + route, { json: data }, function (error, response, body) {
 	       if (error) {
-	          console.log("Error encountered in microservices http call - Ship")
+	          console.log("Error encountered calling - callOpenWhisk")
 	          console.log(error)
 	          reject(error) }
 	       resolve(body)
