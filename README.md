@@ -12,9 +12,14 @@ Getting the app running on your local machine takes only a few steps:
 3. Update configuration parameters
 4. start the app - npm run start
 
+Runs on port 3100
+
 The platform is configured to start a nodejs server and execute a sequence of tests using ava
 
-One of the tests in the sequence will fire an api request to the micromachine server. If the server us not running, the test will fail and terminate this nodejs process
+One of the tests in the sequence will fire an api request to the micromachine server. If the server is not running, the test will fail and terminate this nodejs process
+
+Postman can also be used to construct an api, ping port 3100, and reach the micromachine server.
+For examle
 
 ## License and Use
  [LICENSE](./LICENSE.txt)
