@@ -20,7 +20,8 @@ One of the tests in the sequence will fire an api request to the micromachine se
 
 Postman can also be used to construct multiple tests:
 1. simple http get transaction: localhost:3100/status  > renders a status object
-2. http post transaction: Localhost:3100/signup   > include an payload object (raw, application/json) with email and pswd 
+2. http post transaction: Localhost:3100/signup   > include an payload object (raw, application/json) with email and pswd
+3. simple http transaction - localhost:3100/api/ship > renders a reply object (this replicates the automated test of ava)
 
 ## License and Use
  [LICENSE](./LICENSE.txt)
