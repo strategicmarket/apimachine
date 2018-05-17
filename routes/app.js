@@ -3,6 +3,7 @@
 const express = 		require('express')
 const bodyParser = 	require('body-parser')
 const request =     require('request')
+const data = 				require('../db/data.json')
 
 const app = express();
 
@@ -34,6 +35,10 @@ app.post('/signup', signupHandler);
 // pulse micromachine and return static response
 app.get('/api/ship', shipHandler);
 
+// test openwhisk microservices
+// pulse micromachine and return static response
+app.post('/api/ibm', openHandler);
+
 //  function issues http call to server and returns static response
 async function shipHandler(req, res) {
 	const {method, url, headers, body } = req
@@ -46,6 +51,27 @@ async function shipHandler(req, res) {
 const fetch = (route) => {
 	return new Promise((resolve, reject) => {
 	   request.get( api + route, function (error, response, body) {
+	       if (error) {
+	          console.log("Error encountered in microservices http call - Ship")
+	          console.log(error)
+	          reject(error) }
+	       resolve(body)
+	    });
+	  })
+}
+
+//  function issues http call to server, testing the microservices and returning response
+async function openHandler(req, res) {
+	const {method, url, headers, body } = req
+	const result = await callOpenWhisk(url)
+	res.writeHead(200, {'Content-Type': 'application/json'})
+	res.write(result)
+	res.end()
+}
+
+const callOpenWhisk = (route) => {
+	return new Promise((resolve, reject) => {
+	   request.post( api + route, { json: data }, function (error, response, body) {
 	       if (error) {
 	          console.log("Error encountered in microservices http call - Ship")
 	          console.log(error)
