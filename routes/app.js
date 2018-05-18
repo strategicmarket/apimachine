@@ -64,9 +64,13 @@ const fetch = (route) => {
 async function openHandler(req, res) {
 	const {method, url, headers, body } = req
 	const result = await callOpenWhisk(url)
-	res.writeHead(200, {'Content-Type': 'application/json'})
-	res.write(result)
-	res.end()
+	console.log("openhandler function ")
+	console.log(result)
+	//res.writeHead(200, {'Content-Type': 'application/json'})
+	//res.write(result)
+	res.status(200).send(JSON.stringify(result))
+	return
+	//res.end()
 }
 
 const callOpenWhisk = (route) => {
