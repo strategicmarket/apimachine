@@ -23,7 +23,6 @@ Postman can also be used to construct multiple tests:
 2. http post transaction: Localhost:3100/signup   > include an payload object (raw, application/json) with email and pswd
 3. simple http transaction - localhost:3100/api/ship > renders a reply object (this replicates the automated test of ava)
 
-
 Microservices are the core of an Agent's 'intelligent interaction'. The design of Strategic Machines is to integrate the use NLO, NLU, NLG and Machine Learning with pure functions (microservices) -- reducing complexity, cost and cycle time for the build, test and deployment of winsome virtual Agents for businesses. The architecture of the Machines platform presumes a separation of concerns between important entities involved in the composition of cognitive apps:
 
 > platform services- The messaging platform is a low latency processing platform, integrating channels, state machines, and data services with every message before handing it to a microservice for response
