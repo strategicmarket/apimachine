@@ -9,8 +9,10 @@ A test runner for trigger API calls against micromachine, the developer workbenc
 Getting the app running on your local machine takes only a few steps:
 
 1. clone the project - `git clone https://github.com/strategicmarket/apimachine.git`
-3. Update configuration parameters. A .env file with port=3100 is needed
-4. start the app and execute the set of ava tests- npm run start
+2. Update configuration parameters. A .env file with port=3100 is needed
+3. start the app and execute the set of ava tests- npm run start
+4. Note: npm run cover ... to execute the set of tests and report on code coverage
+
 
 Runs on port 3100
 
