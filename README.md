@@ -10,7 +10,7 @@ Getting the app running on your local machine takes only a few steps:
 
 1. clone the project - `git clone https://github.com/strategicmarket/apimachine.git`
 3. Update configuration parameters. A .env file with port=3100 is needed
-4. start the app - npm run start
+4. start the app and execute the set of ava tests- npm run start
 
 Runs on port 3100
 
