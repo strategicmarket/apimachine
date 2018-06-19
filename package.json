@@ -41,6 +41,6 @@
     "server": "node server",
     "testit": "ava --verbose",
     "msg": "echo 'processes are starting'",
-    "cover": "node_modules/.bin/nyc npm testit"
+    "cover": "node_modules/.bin/nyc npm run testit"
   }
 }
